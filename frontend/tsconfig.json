@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "esnext",
     "module": "esnext",
-    "strict": true,
+    "strict": true, // This will determine who strict the compiler is
     "jsx": "preserve",
     "moduleResolution": "node",
     "skipLibCheck": true,
@@ -11,6 +11,8 @@
     "forceConsistentCasingInFileNames": true,
     "useDefineForClassFields": true,
     "sourceMap": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
     "baseUrl": ".",
     "types": [
       "webpack-env"
