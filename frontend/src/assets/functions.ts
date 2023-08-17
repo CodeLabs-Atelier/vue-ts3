@@ -12,6 +12,7 @@ export let add = (a: number, b: number) => a + b;
 export let sub = (a: number, b: number) => a - b;
 export let mul = (a: number, b: number) => a * b;
 export let ran = () => Math.floor(Math.random() + 100)
+export let dif = (a: number, b: number) => a - b;
 
 // Promises: From Basic to Advanced
 // Basic: Axios Promises
