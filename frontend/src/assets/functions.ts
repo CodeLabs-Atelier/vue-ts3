@@ -11,31 +11,29 @@ export let str: string = "Hello World";
 export let add = (a: number, b: number) => a + b;
 
 
+
 // Promises: From Basic to Advanced
 // Basic: Axios Promises
 // Because this is TypeScript and we are returning a JSON object from the call, we want to type he return, I'll use and interface here
 export interface ProfileData {
-    firstName: string,
-    lastName: string,
-    age: number
+    first_name: string,
+    last_name: string,
+    age: number,
+    account_number: number
 }
-export async function getData() {
+export async function getProfileData(accountNumber: number) {
     try {
-        const response = await axios.get("http://localhost:3000/profile");
-        console.log(response.data)
-        const data: ProfileData | Error = response.data; // Access resolved data
+        const response = await axios.get(`http://localhost:3000/profile/${accountNumber}`);
+        const data: ProfileData = response.data;
         return data;
-    } catch (error) {
-        return new Error(`Error encountered during API call: ${error}`);
+    } catch(error) {
+        console.log(error)
     }
 }
 
 
 
-
-
-
-// You can export objects
+// Export these objects
 // (4) Example ways to type properites in an object
 // (1) Use Type Assertions to give the properties types
 export let obj = {
@@ -48,23 +46,23 @@ export interface ObjInt {
     f_name: string,
     l_name: string,
     age: number
-}
+};
 export let obj2: ObjInt = {
     f_name: "Andrew",
     l_name: "Davis",
     age: 30
-}
+};
 // (3) Or use a Type
 type ObjType = {
     f_name: string,
     l_name: string,
     age: number
-}
+};
 export let obj3: ObjType = {
     f_name: "Andrew",
     l_name: "Davis",
     age: 30
-}
+};
 // (4) Or usa a Class
 export class ObjClass {
     constructor(
@@ -72,5 +70,5 @@ export class ObjClass {
         public l_name: string,
         public age: number
     ) {}
-}
+};
 export let obj4 = new ObjClass("Andrew", "Davis", 30);
