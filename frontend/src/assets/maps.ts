@@ -11,3 +11,5 @@ export let names_map = names.map((name, index) => {
         lastName: names[index] // Same value as just 'name'
     } as Name;
 });
+
+// Comment: main
