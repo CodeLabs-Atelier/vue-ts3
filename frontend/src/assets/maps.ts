@@ -12,4 +12,5 @@ export let names_map = names.map((name, index) => {
     } as Name;
 });
 
-// Comment: main
+// Comment1: main
+// Comment2: main 
