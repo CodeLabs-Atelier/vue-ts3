@@ -1,6 +1,7 @@
-import { Client } from '../../src/assets/classes';
+import { Client, getPropertyNames } from './src/assets/classes';
 import { test, expect } from 'vitest'
 
 test("Class has (2) properties", () => {
-    expect(Client.getPropertyNames().length()).toBe(2)
+    let c = new Client('Name', 0);
+    expect(c.getPropertyNames().length).toBe(2)
 })
