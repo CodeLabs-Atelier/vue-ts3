@@ -11,6 +11,7 @@ export let str: string = "Hello World";
 export let add = (a: number, b: number) => a + b;
 export let sub = (a: number, b: number) => a - b;
 export let mul = (a: number, b: number) => a * b;
+export let ima = (t: boolean, a: number, b: number) => t? a: b;
 
 // Promises: From Basic to Advanced
 // Basic: Axios Promises
